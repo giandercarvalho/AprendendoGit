@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Formulário de Contato</title>
+
+  <style>
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 350px;
+      width: 450px;
+    }
+  </style>
+
+  <script>
+    function enviarFormulario() {
+      // Obter os valores dos campos
+      var nome = document.getElementById("nome").value;
+      var email = document.getElementById("email").value;
+      var telefone = document.getElementById("telefone").value;
+      var orcamento = document.getElementById("orcamento").value;
+
+      // Verificar se todos os campos estão preenchidos
+      if (nome === '' || email === '' || telefone === '' || orcamento === '') {
+        alert("Por favor, preencha todos os campos do formulário.");
+        return;
+      }
+
+      // Criar o corpo do email
+      var corpoEmail = "Nome: " + nome + "\n";
+      corpoEmail += "Email: " + email + "\n";
+      corpoEmail += "Telefone: " + telefone + "\n";
+      corpoEmail += "Qtd Peças: " + orcamento;
+
+      // Exibir os dados para confirmação
+      if (confirm("Confirme se os dados estão corretos:\n\n" + corpoEmail)) {
+
+      // Enviar o email
+      window.open('mailto:giandercarvalho@gmail.com?subject=Formulário de Contato&body=' + encodeURIComponent(corpoEmail));
+
+      // Limpar os campos do formulário
+      document.getElementById("nome").value = '';
+        document.getElementById("email").value = '';
+        document.getElementById("telefone").value = '';
+        document.getElementById("orcamento").value = '';
+      }
+   
+    }
+  </script>
+</head>
+<body>
+  <div class="container" style="background-color: #E5E5E5;">
+  <form>
+
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" name="nome" style="width: 330px"><br><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" style="width: 330px"><br><br>
+
+    <label for="telefone">Telefone:</label>
+    <input type="tel" id="telefone" name="telefone" style="width: 315px"><br><br>
+
+    <label for="orcamento">Qtd Peças:</label>
+    <input type="text" id="orcamento" name="orcamento" dir="auto" style="width: 305px"><br><br>
+
+    <label for="informativo">Entraremos em contato o mais rápido possível! Muito obrigado!</label><br><br>
+
+    <input type="button" value="Enviar" onclick="enviarFormulario()">
+  </form>
+  </div>
+</body>
+</html>

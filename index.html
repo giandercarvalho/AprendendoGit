@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+        <title>OLARIA | V.L. BUCCI</title>
+
+        <link href="https://fonts.googleapis.com/css?family=Pacifico|Roboto:100,300,400,500,700,900" rel="stylesheet" />
+        <link href="./assets/css/normalize.css" rel="stylesheet" />
+        <link href="./assets/css/reset.css" rel="stylesheet" />
+        <link rel="stylesheet" href="./assets/css/cabeçalho.css">
+        <link rel="stylesheet" href="./assets/css/banner.css">
+        <link rel="stylesheet" href="./assets/css/produtos.css">
+        <link rel="stylesheet" href="./assets/css/orcamento.css">
+        <link rel="stylesheet" href="./assets/css/rodape.css">
+    </head>
+    <body>
+        <header class="cabeçalho" id="idCabecalho">
+            <img src="./assets/img/logo.jpeg" alt="Imagem logo" class="logo imagem-limitada">
+            <nav class="menu">
+                <ul class="menu__lista">
+                    <li class="menu__item"><a href="#idCabecalho" class="menu__link ativo">Início</a></li>
+                    <li class="menu__item"><a href="#idProdutos" class="menu__link">Produtos</a></li>
+                    <li class="menu__item"><a href="#idOrcamento" class="menu__link">Orçamento</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="banner">
+            <div class="banner__imagem"></div>
+            <h2 class="banner__titulo">Conheça um pouco mais sobre nós!</h1>
+        </section>
+
+        <section class="sobre">
+            <h2 class="sobre__titulo">Produtos de qualidade para a sua construção</h2>
+            <p class="sobre__descriçao">Nossos produtos são resistentes, seguros e atendem todos os requisitos para uma construção de qualidade!</p>
+        </section>
+
+        <section class="produtos" id="idProdutos">
+            <div class="produto">
+                <img src="./assets/img/produtos/tijoloColonial.jpeg" alt="Tijolo Colonial" class="produto__imagem">
+                <div class="produto__conteudo">
+                    <h4 class="produto__titulo">Tijolo Colonial</h4>
+                    <p class="produto__descricao">Altura: 7cm<br>
+                        Comprimento: 27cm<br>
+                        Espessura: 13,5cm<br>
+                        Peso: 3,8kg<br>
+                        Peças por mt²: 46</p>
+                    <button class="produto__botao">Faça um orçamento</button>
+                </div>
+            </div>
+
+            <div class="produto">
+                <img src="./assets/img/produtos/tijoloComum.jpeg" alt="Tijolo Comum" class="produto__imagem">
+                <div class="produto__conteudo">
+                    <h4 class="produto__titulo">Tijolo Comum</h4>
+                    <p class="produto__descricao">Altura: 6cm<br>
+                        Comprimento: 13cm<br>
+                        Espessura: 10,5cm<br>
+                        Peso: 2kg<br>
+                        Peças por mt²: 52</p>
+                    <button class="produto__botao">Faça um orçamento</button>
+                </div>
+            </div>
+
+            <div class="produto">
+                <img src="./assets/img/produtos/tijolinho.jpeg" alt="Tijolinho" class="produto__imagem">
+                <div class="produto__conteudo">
+                    <h4 class="produto__titulo">Tijolinho</h4>
+                    <p class="produto__descricao">Altura: 4,5cm<br>
+                        Comprimento: 22cm<br>
+                        Espessura: 10,5cm<br>
+                        Peso: 1,5kg<br>
+                        Peças por mt²: 60</p>
+                    <button class="produto__botao">Faça um orçamento</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="orcamento" id="idOrcamento">
+            <h3 class="orcamento__titulo">Orçamento</h3>
+            <p class="orcamento__descricao">Entre em contato agora e peça um orçamento</p>
+            <button class="produto__botao">CLIQUE AQUI</button>
+        </section>
+
+        <footer class="rodape">
+            <h3 class="contato">Contato: giandercarvalho@gmail.com</h3>
+        </footer>
+
+        <script>
+                var botoesOrcamento = document.querySelectorAll('.produto__botao');
+                for (var i = 0; i < botoesOrcamento.length; i++) {
+                    botoesOrcamento[i].addEventListener('click', function() {
+                        window.open('popup.html', 'popup', 'width=450,height=400');
+                    });
+                }
+            </script>
+    </body>
+</html>
